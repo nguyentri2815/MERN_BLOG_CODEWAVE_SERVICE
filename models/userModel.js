@@ -18,12 +18,12 @@ const userSchema = mongoose.Schema(
       default: false,
     },
     accountType: {
-        type: String,
-        default: "user",
+      type: String,
+      default: "user",
     },
     provider: {
-        type: String,
-        default: "admin",
+      type: String,
+      default: "admin",
     },
 
     password: {
@@ -33,8 +33,8 @@ const userSchema = mongoose.Schema(
     image: {
       type: String,
     },
-    
 
+    //Ý đồ tác giả đề đơn giản cho việc filter data popular writer
     followers: [
       {
         type: Schema.Types.ObjectId,

@@ -6,6 +6,7 @@ import {
   deActivePost,
   deletePost,
   analyticsPosts,
+  getPopularContents,
 } from "../controllers/postController.js";
 import { authenticateJWT } from "../middleware/auth.js";
 
@@ -28,6 +29,8 @@ router.get("/analytics/:userID", analyticsPosts);
 //Client
 //Get posts
 router.get("/", getPosts);
+//post trending
+router.get("/trending", getPopularContents);
 //Update views
 //Update comments
 

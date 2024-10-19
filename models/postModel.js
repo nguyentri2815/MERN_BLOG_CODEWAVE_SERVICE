@@ -32,21 +32,23 @@ const postSchema = mongoose.Schema(
     },
     user: {
       type: Schema.Types.ObjectId,
-      ref: "Users"
+      ref: "Users",
     },
 
+    //Ý đồ tác giả đề đơn giản cho việc filter data popular posts
     views: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Views"
-      }
+        ref: "Views",
+      },
     ],
+
     comments: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Comments"
-      }
-    ]
+        ref: "Comments",
+      },
+    ],
   },
   { timestamps: true }
 );
